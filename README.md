@@ -1,2 +1,2 @@
 # game
-Video game project for the Augmented Reality and Accessibility  course at Universidad de Oviedo.
+Video game project for the Aumented Reality and Accessibility course at Universidad de Oviedo.
