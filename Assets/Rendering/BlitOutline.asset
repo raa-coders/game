@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5a2f2b53033d3439722b211ba444a8, type: 3}
+  m_Name: BlitOutline
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  settings:
+    Event: 500
+    blitMaterial: {fileID: 2100000, guid: 629eeec3bc772a14e9b85a16f4a8cf7e, type: 2}
+    blitMaterialPassIndex: 0
+    destination: 0
+    textureId: _BlitPassTexture
