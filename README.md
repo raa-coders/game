@@ -1,4 +1,4 @@
-# Barman Simulator
+# Barman Simulator 2019
 Video game project for the Augmented Reality and Accessibility course at Universidad de Oviedo.
 
 ## Game Design Summary
@@ -37,9 +37,39 @@ The happier clients walk out the bar, the harder future cocktails will be. As a 
 
 ## Planning
 
-Víctor, si lees esto, danos dos horitas más 😬😬😬
+### Sprint 1 (Oct 21 - Nov 3)
 
-[ Work In Progress ]
+ - [x] Putting a _SUPER AWESOME_ team together
+ - [x] Game Design
+ - [x] Storyboard
+ 
+### Sprint 2 (Nov 4 - Nov 18)
+
+ - [ ] Basic UI
+ - [ ] Basic orders
+ - [ ] Grabbing and pouring bottles
+ - [ ] Serving cocktails to clients
+ - [ ] Client happyness
+ - [ ] **First demo build**
+
+### Sprint 3 (Nov 18 - Dec 2)
+
+ - [ ] Mixing
+ - [ ] Drink presentation
+ - [ ] Difficulty system
+ - [ ] Basic sounds
+ - [ ] **Second demo build**
+
+### Final Sprint (Dec 2 - Dec 15)
+
+ - [ ] Refined UI
+ - [ ] Better sounds
+ - [ ] Random-generated clients
+ - [ ] Special effects
+ - [ ] **Final build**
+
+
+
 
 
 ## Wish List
