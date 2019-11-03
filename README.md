@@ -39,7 +39,7 @@ The happier clients walk out the bar, the harder future cocktails will be. As a 
 
 All coding and 2D graphic assets will be developed in-house. Ideally, 3D models will also be created in-house via C# mesh manipulation. Sound effects will be downloaded from speciallized pages that publish audio asserts for free.
 
-If we can afford the insane amount of 10€, maybe we start talking about the possibility of thinking of a viable situation where we buy them.
+If we can afford the insane amount of 10€, maybe we start talking about the possibility of thinking of a viable situation where we buy some Google Cardboard.
 
 ### Sprint 1 (Oct 21 - Nov 3)
 
