@@ -33,7 +33,7 @@ The happier clients walk out the bar, the harder future cocktails will be. As a 
 
 
 
-## Storyoard
+## Storyboard
 ![Storyboard](/StoryBoard.jpg)
 
 
