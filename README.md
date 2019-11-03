@@ -9,11 +9,9 @@ Video game project for the Aumented Reality and Accessibility course at Universi
 
 **Narrative and objectives:** In this game you play as a barman, who will serve the different cocktails the bar clients may order. The objective of the game is to keep our clients happy, serving top-level cocktails (or the closest we can get) without getting any order wrong.
 
-**Characters:** El jugador se encontrará detrás de la barra e interectuará 
-con los ingredientes, recipientes, etc.
+**Characters:** The game will feature the Barman (the player) and a wide cast of non-playable characters that will act as clients of the bar.
 
-**User Interface:** Observando un ingrediente lo podrá coger y mirando un
-recipiente lo podrá añadir a la mezcla.
+**User Interface:** We've opted for a clean UI, with just a cursor in the centre of the screen and a tooltip with the current order displayed in a corner of the screen.
 
 
 ### Main Mechanics
