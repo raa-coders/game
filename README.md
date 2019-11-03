@@ -31,4 +31,6 @@ recipiente lo podrá añadir a la mezcla.
 
 ## Planning
 
+Víctor, si lees esto, danos dos horitas más 😬😬😬
+
 [ Work In Progress ]
