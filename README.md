@@ -22,3 +22,6 @@ recipiente lo podrá añadir a la mezcla.
 
 Wish-list: Efectos al mover la coctelera, sonidos al coger los elementos 
 (ingredientes, recipientes, etc.).
+
+Storyoard
+![Storyboard](/StoryBoard.jpg)
