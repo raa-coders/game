@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enabled: 1
   settings:
-    Event: 500
+    Event: 550
     blitMaterial: {fileID: 2100000, guid: 629eeec3bc772a14e9b85a16f4a8cf7e, type: 2}
     blitMaterialPassIndex: 0
     destination: 0
