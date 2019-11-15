@@ -1,4 +1,4 @@
-﻿Shader "Attrah/OutlineBlit"
+﻿Shader "LWRP/OutlineBlit"
 {
 	Properties 
 	{
