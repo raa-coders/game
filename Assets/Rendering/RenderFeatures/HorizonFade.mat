@@ -25,9 +25,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _DistanceThreshold: 0.7
-    - _Exponent: 1
+    - _Exponent: 2.3
     - _PosterizationCount: 24
-    - _Step: 40
+    - _Step: 64
     - __Exponent: 0
     m_Colors:
-    - _Color: {r: 0.20754719, g: 0.06417493, b: 0.061676756, a: 1}
+    - _Color: {r: 0.21568628, g: 0.058823526, b: 0.11118541, a: 1}
