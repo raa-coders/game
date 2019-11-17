@@ -1,8 +1,118 @@
 fileFormatVersion: 2
 guid: 1822162fe0da37c4db5cf5f65d353a1b
 ModelImporter:
-  serializedVersion: 26
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: mesh_door
+    100002: mesh_doublewall_corner
+    100004: mesh_doublewall_cross_3
+    100006: mesh_doublewall_cross_4
+    100008: mesh_doublewall_door
+    100010: mesh_doublewall_straight
+    100012: mesh_doublewall_window
+    100014: mesh_doublewall_window_small
+    100016: mesh_floor_1x1
+    100018: mesh_floor_1x2
+    100020: mesh_floor_2x1
+    100022: mesh_floor_2x2
+    100024: mesh_wall_corner
+    100026: mesh_wall_corner_outside
+    100028: mesh_wall_door
+    100030: mesh_wall_straight
+    100032: mesh_wall_window
+    100034: mesh_wall_window_small
+    100036: mesh_window_sash_1
+    100038: mesh_window_sash_2
+    100040: //RootNode
+    400000: mesh_door
+    400002: mesh_doublewall_corner
+    400004: mesh_doublewall_cross_3
+    400006: mesh_doublewall_cross_4
+    400008: mesh_doublewall_door
+    400010: mesh_doublewall_straight
+    400012: mesh_doublewall_window
+    400014: mesh_doublewall_window_small
+    400016: mesh_floor_1x1
+    400018: mesh_floor_1x2
+    400020: mesh_floor_2x1
+    400022: mesh_floor_2x2
+    400024: mesh_wall_corner
+    400026: mesh_wall_corner_outside
+    400028: mesh_wall_door
+    400030: mesh_wall_straight
+    400032: mesh_wall_window
+    400034: mesh_wall_window_small
+    400036: mesh_window_sash_1
+    400038: mesh_window_sash_2
+    400040: //RootNode
+    2100000: mat_wall_side_b
+    2100002: mat_wall_inside_1
+    2100004: mat_door
+    2100006: mat_window
+    2100008: mat_floor
+    2100010: mat_wall_inside_2
+    2100012: mat_wall_inside_3
+    2100014: mat_wall_inside_4
+    2300000: mesh_door
+    2300002: mesh_doublewall_corner
+    2300004: mesh_doublewall_cross_3
+    2300006: mesh_doublewall_cross_4
+    2300008: mesh_doublewall_door
+    2300010: mesh_doublewall_straight
+    2300012: mesh_doublewall_window
+    2300014: mesh_doublewall_window_small
+    2300016: mesh_floor_1x1
+    2300018: mesh_floor_1x2
+    2300020: mesh_floor_2x1
+    2300022: mesh_floor_2x2
+    2300024: mesh_wall_corner
+    2300026: mesh_wall_corner_outside
+    2300028: mesh_wall_door
+    2300030: mesh_wall_straight
+    2300032: mesh_wall_window
+    2300034: mesh_wall_window_small
+    2300036: mesh_window_sash_1
+    2300038: mesh_window_sash_2
+    3300000: mesh_door
+    3300002: mesh_doublewall_corner
+    3300004: mesh_doublewall_cross_3
+    3300006: mesh_doublewall_cross_4
+    3300008: mesh_doublewall_door
+    3300010: mesh_doublewall_straight
+    3300012: mesh_doublewall_window
+    3300014: mesh_doublewall_window_small
+    3300016: mesh_floor_1x1
+    3300018: mesh_floor_1x2
+    3300020: mesh_floor_2x1
+    3300022: mesh_floor_2x2
+    3300024: mesh_wall_corner
+    3300026: mesh_wall_corner_outside
+    3300028: mesh_wall_door
+    3300030: mesh_wall_straight
+    3300032: mesh_wall_window
+    3300034: mesh_wall_window_small
+    3300036: mesh_window_sash_1
+    3300038: mesh_window_sash_2
+    4300000: mesh_wall_corner
+    4300002: mesh_wall_straight
+    4300004: mesh_wall_window
+    4300006: mesh_wall_window_small
+    4300008: mesh_wall_corner_outside
+    4300010: mesh_wall_door
+    4300012: mesh_door
+    4300014: mesh_window_sash_1
+    4300016: mesh_floor_1x1
+    4300018: mesh_floor_2x2
+    4300020: mesh_window_sash_2
+    4300022: mesh_floor_1x2
+    4300024: mesh_floor_2x1
+    4300026: mesh_doublewall_straight
+    4300028: mesh_doublewall_door
+    4300030: mesh_doublewall_corner
+    4300032: mesh_doublewall_window
+    4300034: mesh_doublewall_window_small
+    4300036: mesh_doublewall_cross_3
+    4300038: mesh_doublewall_cross_4
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -38,7 +148,6 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -46,19 +155,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -67,11 +175,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -81,7 +188,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
