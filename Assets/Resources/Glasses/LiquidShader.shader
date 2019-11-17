@@ -92,7 +92,7 @@
             float _Rim, _RimPower;
             
             
-            float4 RotateAroundYInDegrees (float4 vertex, float degrees)
+            float4 RotateAroundYInDegrees(float4 vertex, float degrees)
             {
                 float alpha = degrees * 3.1416 / 180;
                 float sina, cosa;
@@ -121,7 +121,7 @@
                 
                 float3 worldPos = mul(unity_ObjectToWorld, v.vertex);
                 // rotate it around XY
-                float3 worldPosX= RotateAroundYInDegrees(float4(worldPos,0),360);
+                float3 worldPosX = RotateAroundYInDegrees(float4(worldPos,0),360);
                 // rotate around XZ
                 float3 worldPosZ = float3 (worldPosX.y, worldPosX.z, worldPosX.x);     
                 // combine rotations with worldPos, based on sine wave from script
