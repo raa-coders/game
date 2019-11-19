@@ -51,7 +51,7 @@ If we can afford the insane amount of 10€, maybe we start talking about the po
 
  - [ ] Basic UI
  - [ ] Basic orders
- - [ ] Grabbing and pouring bottles
+ - [x] Grabbing and pouring bottles
  - [ ] Serving cocktails to clients
  - [ ] Client happyness
  - [ ] **First demo build**
