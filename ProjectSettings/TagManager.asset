@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Liquid1
   - liquid
+  - Button
+  - Text
   layers:
   - Default
   - TransparentFX
