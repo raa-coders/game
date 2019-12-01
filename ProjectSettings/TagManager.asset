@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Liquid1
+  - liquid
   layers:
   - Default
   - TransparentFX

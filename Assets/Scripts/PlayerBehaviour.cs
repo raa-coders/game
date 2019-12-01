@@ -7,6 +7,5 @@ public class PlayerBehaviour : MonoBehaviour
     public void Start()
     {
         _raycaster = transform.GetChild(0).GetComponent<GvrPointerPhysicsRaycaster>();
-            
     }
 }
