@@ -1,4 +1,4 @@
-Shader "Attrah/Depth"
+Shader "LWRP/Depth"
 {
 	Properties 
 	{

@@ -1,4 +1,4 @@
-﻿Shader "Attrah/PixelEffect"
+﻿Shader "LWRP/PixelEffect"
 {
     Properties
     {
