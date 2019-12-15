@@ -6,7 +6,9 @@
         
         
         _Tint ("Tint", Color) = (1,1,1,1)
-        _FillAmount ("Fill Amount", Range(-10,10)) = 0.0
+        //_FillAmount ("Fill Amount", Range(-10,10)) = 0.0
+        _FillAmount ("Fill Amount", Range(0,1)) = 0.0
+        
         [HideInInspector] _WobbleX ("WobbleX", Range(-1,1)) = 0.0
         [HideInInspector] _WobbleZ ("WobbleZ", Range(-1,1)) = 0.0
         _TopColor ("Top Color", Color) = (1,1,1,1)
@@ -61,7 +63,6 @@
             #pragma multi_compile_fwdbase
             
             #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Core.hlsl"
-            #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Lighting.hlsl"
 
 
@@ -78,10 +79,9 @@
                 float2 uv : TEXCOORD0;
                 float3 viewDir : TEXCOORD1;
                 float3 normal : NORMAL;    
-                float fillEdge : TEXCOORD2;
+                //float fillEdge : TEXCOORD2;
+                float liquidY : TEXCOORD2;
             };
-            
-            
             
             
             
@@ -91,7 +91,66 @@
             float4 _TopColor, _RimColor, _FoamColor, _Tint;
             float _Rim, _RimPower;
             
+            v2f vert (appdata v)
+            {
+                // Put in [0, 1] range
+                float liquidY = (v.vertex.y + 1) / 2.0f;
+                liquidY *= _FillAmount;
+                
+                // Take it back to the vertex
+                v.vertex.y = -1 + 2 * liquidY;
+                
+                VertexPositionInputs vertexInput = GetVertexPositionInputs(v.vertex.xyz);
+                VertexNormalInputs vertexNormalInput = GetVertexNormalInputs(v.normal);
+                        
+                half3 viewDirWS = GetCameraPositionWS() - vertexInput.positionWS;
+                viewDirWS = SafeNormalize(viewDirWS);
             
+                v2f o;
+                
+                o.liquidY = liquidY;
+                
+                o.vertex = vertexInput.positionCS;
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.normal = vertexNormalInput.normalWS;
+                //o.positionWSAndFogFactor = float4(vertexInput.positionWS, 1);
+                o.viewDir = viewDirWS;
+                
+                return o;
+            }
+            
+            float4 frag (v2f i, float facing : VFACE) : SV_Target
+            {
+                if (_FillAmount <= 0)
+                    return float4(1, 0, 1, 0);
+                    
+                float4 col = tex2D(_MainTex, i.uv) * _Tint;
+                
+                if (i.liquidY >= 1)
+                    col = float4(1, 0, 1, 1);
+                
+                // rim light
+                float dotProduct = 1 - pow(dot(i.normal, i.viewDir), _RimPower);
+                float4 RimResult = smoothstep(0.5, 1.0, dotProduct);
+                RimResult *= _RimColor;
+            
+                //float4 final = applyToonLight(col, i);
+                
+                
+                
+                //VFACE returns positive for front facing, negative for backfacing
+                if (facing <= 0)
+                    return _TopColor;
+                
+                if (_FillAmount - i.liquidY < 0.1f)
+                    return _FoamColor;
+                    
+                return col;
+            }
+            
+            
+            
+            /*
             float4 RotateAroundYInDegrees(float4 vertex, float degrees)
             {
                 float alpha = degrees * 3.1416 / 180;
@@ -100,8 +159,6 @@
                 float2x2 m = float2x2(cosa, sina, -sina, cosa);
                 return float4(vertex.yz , mul(m, vertex.xz)).xzyw ;            
             }
-            
-            
             
             
 
@@ -127,10 +184,11 @@
                 // combine rotations with worldPos, based on sine wave from script
                 float3 worldPosAdjusted = worldPos + (worldPosX  * _WobbleX)+ (worldPosZ* _WobbleZ);
                 // how high up the liquid is
-                o.fillEdge =  worldPosAdjusted.y + _FillAmount;
+                o.fillEdge =  worldPosAdjusted.y * + _FillAmount;
                 
                 return o;
             }
+            
 
 
             float4 frag (v2f i, float facing : VFACE) : SV_Target
@@ -157,6 +215,7 @@
                 //VFACE returns positive for front facing, negative for backfacing
                 return facing > 0 ? finalResult: topColor;
             }
+            */
             ENDHLSL
         }
     }

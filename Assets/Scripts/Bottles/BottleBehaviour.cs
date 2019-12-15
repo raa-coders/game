@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
 using Random = System.Random;
@@ -7,12 +8,27 @@ namespace Bottles
 {
     public class BottleBehaviour : GrabableBehaviour
     {
+
+        public Color LiquidColor;
+
+        public Material BottleMaterial;
+        
         public GameObject LiquidSpawnRoot;
 
         public LiquidBehaviour LiquidPrefab;
         
-        // TODO temporary way to rotate the bottle
         public float Rotation = 0;
+
+
+
+        public void Start()
+        {
+            MeshRenderer renderer = this.GetComponent<MeshRenderer>();
+            renderer.material = new Material(BottleMaterial);
+            renderer.material.SetColor("_BaseColor", this.LiquidColor);
+        }
+     
+        
         
         public void Update()
         {
@@ -21,6 +37,7 @@ namespace Bottles
             // Only pour when grabbed
             if (!_isGrabbed)
                 return;
+            
             
             Rotation = _mainCamera.transform.localEulerAngles.z;
             if (Rotation > 180)
@@ -35,7 +52,7 @@ namespace Bottles
             Vector3 rot = Vector3.zero;
             rot.y = 0; // Freeze y rotation
             rot.z = Rotation;
-
+            
             SpawnLiquid(rot.z);
             
             transform.localEulerAngles = rot;
@@ -61,6 +78,7 @@ namespace Bottles
             for (int i = 0; i < amount; i++)
             {
                 LiquidBehaviour liquid = Instantiate(LiquidPrefab);
+                liquid.Init(this.LiquidColor);
                 liquid.transform.position = pos 
                             + new Vector3(
                                 -0.02f + UnityEngine.Random.value * 0.04f,

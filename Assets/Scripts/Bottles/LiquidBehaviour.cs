@@ -5,12 +5,15 @@ namespace Bottles
 {
     public class LiquidBehaviour : MonoBehaviour
     {
+        public Material Material;
+
+        public Color Color;
 
         /// <summary>
         /// Lifetime, in seconds.
         /// </summary>
         private float _lifetime = 30;
-        
+
         
         public void Awake()
         {
@@ -21,6 +24,15 @@ namespace Bottles
             rb.drag = UnityEngine.Random.value * 10;
             rb.angularDrag = UnityEngine.Random.value * 10;
         }
+
+        public void Init(Color col)
+        {
+            this.Color = col;
+            MeshRenderer renderer = GetComponent<MeshRenderer>();
+            renderer.material = new Material(Material);
+            renderer.material.SetColor("_Color", col);
+        }
+        
 
         public void Update()
         {

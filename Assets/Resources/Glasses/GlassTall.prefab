@@ -228,3 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 203aa9e2d8f87d64f912ee27fc34e0df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LiquidMaterial: {fileID: 2100000, guid: 54f678b299f3287448464c4f2692fa2a, type: 2}
+  FillAmount: 0

@@ -72,16 +72,21 @@ namespace DefaultNamespace
 
                 float pitch = camRot.x;
                 float yaw = 180 - camRot.y;
+                
+                
+                // Get closer when looking down
+                //float dist = _baseDistToCamera - (_baseDistToCamera * 0.5f * Util.DCos(pitch));
+                
 
                 float radius = Mathf.Abs(Util.DCos(pitch)) * _baseDistToCamera;
                 newPos.y -= Util.DSin(pitch) * _baseDistToCamera;
 
                 newPos.x -= Util.DSin(yaw) * radius;
-                newPos.z += Util.DCos(yaw) * radius;
+                //newPos.z += Util.DCos(yaw) * radius;
+                newPos.z = this.transform.position.z;
 
                 this.transform.position = newPos;
                 
-                // TODO PJ: get the glass closer when looking down
             }
         }
 
