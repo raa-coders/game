@@ -6,7 +6,7 @@ namespace Bottles
     public class LiquidBehaviour : MonoBehaviour
     {
         public Material Material;
-
+        
         public Color Color;
 
         /// <summary>
@@ -14,6 +14,8 @@ namespace Bottles
         /// </summary>
         private float _lifetime = 30;
 
+        
+        
         
         public void Awake()
         {
