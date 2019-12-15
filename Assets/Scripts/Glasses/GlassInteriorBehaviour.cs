@@ -34,6 +34,15 @@ namespace Glasses
             _mixes = new Dictionary<LiquidColor, float>();
             _renderer.material.SetFloat(mat_FillAmount, this.FillAmount);
         }
+
+
+        public void CleanUp()
+        {
+            _mixes.Clear();
+            this.FillAmount = 0;
+            _renderer.material.SetFloat(mat_FillAmount, this.FillAmount);
+        }
+        
         
         
         private void OnCollisionEnter(Collision other)

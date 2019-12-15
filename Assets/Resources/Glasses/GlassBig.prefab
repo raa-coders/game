@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4064103954203652435}
   m_Layer: 0
   m_Name: Liquid
-  m_TagString: Untagged
+  m_TagString: GlassInterior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LiquidMaterial: {fileID: 2100000, guid: 54f678b299f3287448464c4f2692fa2a, type: 2}
+  FillAmount: 0
 --- !u!135 &4064103954203652435
 SphereCollider:
   m_ObjectHideFlags: 0

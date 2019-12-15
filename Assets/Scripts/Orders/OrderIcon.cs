@@ -17,16 +17,20 @@ namespace Orders
         private bool _isRunning = false;
 
         private OrdersCanvas _canvas;
+        public Order Order { get; private set; }
         
-        // Start is called before the first frame update
+        
+        
+        
         public void Init(OrdersCanvas canvas, Order order)
         {
             _canvas = canvas;
+            Order = order;
             ImgColorOne.color = order.ColorOne.GetColor();
             ImgColorTwo.color = order.ColorTwo.GetColor();
         }
 
-        // Update is called once per frame
+        
         void Update()
         {
             this.Lifetime -= Time.deltaTime;

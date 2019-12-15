@@ -38,6 +38,14 @@ namespace Orders
             }
         }
 
+        public bool Peek(ref Order order)
+        {
+            if (_orders.Count <= 0)
+                return false;
+            
+            order = _orders.Peek().Order;
+            return true;
+        }
 
         public void EnqueueOrder()
         {
