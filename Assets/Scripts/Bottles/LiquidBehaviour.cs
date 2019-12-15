@@ -1,4 +1,5 @@
 ﻿using System;
+using Orders;
 using UnityEngine;
 
 namespace Bottles
@@ -8,6 +9,8 @@ namespace Bottles
         public Material Material;
         
         public Color Color;
+
+        public LiquidColor LiquidColor;
 
         /// <summary>
         /// Lifetime, in seconds.
@@ -27,12 +30,13 @@ namespace Bottles
             rb.angularDrag = UnityEngine.Random.value * 10;
         }
 
-        public void Init(Color col)
+        public void Init(LiquidColor col)
         {
-            this.Color = col;
+            this.LiquidColor = col;
+            this.Color = col.GetColor();
             MeshRenderer renderer = GetComponent<MeshRenderer>();
             renderer.material = new Material(Material);
-            renderer.material.SetColor("_Color", col);
+            renderer.material.SetColor("_Color", this.Color);
         }
         
 

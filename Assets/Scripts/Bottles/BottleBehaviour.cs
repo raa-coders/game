@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using DefaultNamespace;
+using Orders;
 using UnityEngine;
 using Random = System.Random;
 
@@ -9,7 +10,7 @@ namespace Bottles
     public class BottleBehaviour : GrabableBehaviour
     {
 
-        public Color LiquidColor;
+        public LiquidColor LiquidColor;
 
         public Material BottleMaterial;
         
@@ -25,7 +26,7 @@ namespace Bottles
         {
             MeshRenderer renderer = this.GetComponent<MeshRenderer>();
             renderer.material = new Material(BottleMaterial);
-            renderer.material.SetColor("_BaseColor", this.LiquidColor);
+            renderer.material.SetColor("_BaseColor", this.LiquidColor.GetColor());
         }
      
         

@@ -22,8 +22,8 @@ namespace Orders
         public void Init(OrdersCanvas canvas, Order order)
         {
             _canvas = canvas;
-            ImgColorOne.color = new Color(Random.value, Random.value, Random.value);
-            ImgColorTwo.color = new Color(Random.value, Random.value, Random.value);
+            ImgColorOne.color = order.ColorOne.GetColor();
+            ImgColorTwo.color = order.ColorTwo.GetColor();
         }
 
         // Update is called once per frame

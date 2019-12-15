@@ -41,8 +41,7 @@ namespace Orders
 
         public void EnqueueOrder()
         {
-            Order o = new Order();
-            // TODO choose colors
+            Order o = Order.Create();
             
             OrderIcon orderIcon = Instantiate(OrderIconPrefab, this.SpawnPoint);
             orderIcon.transform.localPosition = new Vector3(64 * _orders.Count, 0, 0);
